@@ -48,6 +48,9 @@
 
 
 
+
+
+
         //on se connect a mysql en local
         $db = new PDO('mysql:host=localhost;dbname=testphp;charset=utf8', 'root', '');
 
@@ -75,8 +78,42 @@
       
             //on affiche le résultat
             print("<p>coucou $prenom, tu as $age ans</p>");
-         
 
+
+
+            // exemple d'algo avec des confitions
+            if($age >= 18){
+
+                print("<p>tu es majeur</p>");
+
+            }else if($age < 18 && $age > 12){
+
+                print("<p>tu es adolescend</p>");
+
+            }else if($age <= 12){
+
+                print("tu es enfant");
+
+            }
+
+            
+            print('<br/>exemple de boucle for <br/>');
+            // exemple de boucle for
+            for($i = 0; $i < $age; $i++){
+                
+                print("<p>$i</p>");
+
+            }
+
+
+            print('<br/>exemple de boucle while <br/>');
+            // exemple de boucle while
+            $i = 0;
+            while($i < $age){
+                
+                print("<p>$i</p>");
+                $i++;
+            }
         }
 
         // ici on affiche des données depuis le bdd
